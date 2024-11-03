@@ -1,0 +1,84 @@
+{
+  "questions": [
+    {
+      "question": "What is his favourite sports team?",
+      "answer1": "A) Supersport United",
+      "answer2": "B) Mamelodi Sundowns",
+      "answer3": "C) Kazer Chefs",
+      "answer4": "D) Orlando Pirates",
+      "correct": "D) Orlando Pirates"
+    },
+    {
+      "question": "What is his biggest fear?",
+      "answer1": "A) Flying",
+      "answer2": "B) Frogs",
+      "answer3": "C) Snakes",
+      "answer4": "D) Heights",
+      "correct": "D) Heights"
+    },
+    {
+      "question": "What is his favourite childhood memory?",
+      "answer1": "A) Playing arcade games",
+      "answer2": "B) Riding his bike",
+      "answer3": "C) Being a Soccer Captain",
+      "answer4": "D) Being a Volleyball Captain",
+      "correct": "D) Being a Volleyball Captain"
+    },
+    {
+      "question": "What is his favourite song?",
+      "answer1": "A) No Woman No Cry by Bob Marley",
+      "answer2": "B) Stairway to Heaven by Led Zeppelin",
+      "answer3": "C) Don't you Worry Child by Avicii",
+      "answer4": "D) You'll Never Find by Lou Rawls",
+      "correct": "D) You'll Never Find by Lou Rawls"
+    },
+    {
+      "question": "What is his dream vacation destination?",
+      "answer1": "A) Hawaii",
+      "answer2": "B) America",
+      "answer3": "C) China",
+      "answer4": "D) Jamaica",
+      "correct": "D) Jamaica"
+    },
+    {
+      "question": "What is his favourite food?",
+      "answer1": "A) Pap and Chicken",
+      "answer2": "B) Steak",
+      "answer3": "C) Sushi",
+      "answer4": "D)Pasta and Mince",
+      "correct": "B) Steak"
+    },
+    {
+      "question": "What is his biggest pet peeve (annoyance)?",
+      "answer1": "A) Slow drivers",
+      "answer2": "B) Jay-Walking",
+      "answer3": "C) People who talk on the phone while driving",
+      "answer4": "D) People who left over-take on the road",
+      "correct": "B) Jay-Walking"
+    },
+    {
+      "question": "What is the worst thing he had to overcame?",
+      "answer1": "A) Being sent to prison",
+      "answer2": "B) Getting into a car accident",
+      "answer3": "C) Getting accused of starting a fire which burned down a house",
+      "answer4": "D) Getting accused of splashing a partner with an acidic substance",
+      "correct": "B) Getting into a car accident"
+    },
+    {
+      "question": "What is his biggest accomplishment?",
+      "answer1": "A) Building a house",
+      "answer2": "B) Starting a business",
+      "answer3": "C) Winning an award",
+      "answer4": "D) Buying a sports car",
+      "correct": "A) Building a house"
+    },
+    {
+      "question": "What is the biggest amount he ever got in his account?",
+      "answer1": "A) R1 000 000",
+      "answer2": "B) R284 000",
+      "answer3": "C) R470 000",
+      "answer4": "D) R157 000",
+      "correct": "D) R157 000"
+    }
+  ]
+}

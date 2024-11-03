@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">QuizSpouse</string>
+    <string name="quiz_spouse">Quiz Spouse</string>
+    <string name="easy_quiz">Easy Quiz</string>
+    <string name="difficult_quiz">Difficult Quiz</string>
+    <string name="about_quiz">About Quiz</string>
+    <string name="exit_message">Are you sure you want to exit the app?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="mommy_quiz">Mommy Quiz</string>
+    <string name="malume_quiz">Malume Quiz</string>
+    <string name="app_version_1_0">App Version: 1.0</string>
+    <string name="tshiamo_quiz">Tshiamo Quiz</string>
+
+    <string-array name="userList">
+        <item>Select an option</item>
+        <item>Mommy</item>
+        <item>Tshiamo</item>
+        <item>Malume</item>
+    </string-array>
+
+    <string-array name="questionList">
+        <item>Select an option</item>
+        <item>A</item>
+        <item>B</item>
+        <item>C</item>
+        <item>D</item>
+    </string-array>
+</resources>
