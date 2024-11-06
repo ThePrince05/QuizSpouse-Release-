@@ -191,10 +191,10 @@ public class AddActivity extends AppCompatActivity {
             String userName = CapitalizeFirstLetter(user.getSelectedItem().toString());
             String QuestionAnswer = CapitalizeFirstLetter(questionAnswer.getSelectedItem().toString());
             String Question = CapitalizeFirstLetter(question.getText().toString().trim());
-            String AnswerA = CapitalizeFirstLetter(answerA.getText().toString().trim());
-            String AnswerB = CapitalizeFirstLetter(answerB.getText().toString().trim());
-            String AnswerC = CapitalizeFirstLetter(answerC.getText().toString().trim());
-            String AnswerD = CapitalizeFirstLetter(answerD.getText().toString().trim());
+            String AnswerA = "A) " + CapitalizeFirstLetter(answerA.getText().toString().trim());
+            String AnswerB = "B) " + CapitalizeFirstLetter(answerB.getText().toString().trim());
+            String AnswerC = "C) " + CapitalizeFirstLetter(answerC.getText().toString().trim());
+            String AnswerD = "D) " + CapitalizeFirstLetter(answerD.getText().toString().trim());
 
 
             String correctAnswer = "None";

@@ -38,9 +38,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             db.execSQL(CREATE_TABLE);
 
             // Insert the questions when the database is created
-            InsertMommyQuestions(db);
-            InsertMalumeQuestions(db);
-            InsertTshiamoQuestions(db);
+            InsertHerQuestions(db);
+            InsertHisQuestions(db);
+
         }
         catch (Exception ex){
             System.out.println("Oops something went wrong on: " + ex.getMessage());
@@ -56,10 +56,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         onCreate(db);
     }
 
-    public void InsertMommyQuestions(SQLiteDatabase db) {
+    public void InsertHerQuestions(SQLiteDatabase db) {
 
         // Username to associate the questions with
-        String username = "Mommy";
+        String username = "Her";
 
         // Example batch of questions
         String[][] questions = {
@@ -78,10 +78,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         InsertQuestions(db, username, questions);
     }
 
-    public void InsertMalumeQuestions(SQLiteDatabase db) {
+    public void InsertHisQuestions(SQLiteDatabase db) {
 
         // Username to associate the questions with
-        String username = "Malume";
+        String username = "His";
 
         // Array of questions
         String[][] questions = {
@@ -100,27 +100,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         InsertQuestions(db, username, questions);
     }
 
-    public void InsertTshiamoQuestions(SQLiteDatabase db) {
 
-        // Username to associate the questions with
-        String username = "Tshiamo";
-
-        // Array of questions
-        String[][] questions = {
-                {"What is her favourite colour?", "A) Red", "B) Black", "C) Pink", "D) Brown", "A) Red"},
-                {"What is her favourite clothing style?", "A) Over-sized baggy clothes", "B) Tight clothes", "C) Tutu dress/skirt", "D) 2000's Y2K style", "A) Over-sized baggy clothes"},
-                {"Who is her favourite artist?", "A) Kendrick Lamar", "B) Tyla", "C) Tyler Swift", "D) Uncle Waffles", "B) Tyla"},
-                {"What is her favourite brand?", "A) Nike", "B) Jordan", "C) Calvin Klein", "D) Puma", "C) Calvin Klein"},
-                {"What is her favourite song?", "A) I was a bad girl by JoJo Siwa", "B) Truth or Dare by Tyla", "C) Mocking Bird by Eminem", "D) Wadi Busa by Uncle Waffles", "B) Truth or Dare by Tyla"},
-                {"What is her favourite cartoon?", "A) Sofia The First", "B) Teen Titans Go", "C) Mr Magoo", "D) Regular Show", "A) Sofia The First"},
-                {"What is the celebrity she wants to meet?", "A) Sabrina Carpenter", "B) Tyler Swift", "C) Tyla", "D) Kendrick Lamar", "D) Kendrick Lamar"},
-                {"What is her favourite phone brand?", "A) Huawei", "B) Apple (iPhone)", "C) Samsung", "D) Le Popotane", "B) Apple (iPhone)"},
-                {"Who is her favourite Youtuber?", "A) SSSniperwolf", "B) The RSA Boys", "C) Ghost Hlubi", "D) Ashley Plays", "D) Ashley Plays"},
-                {"What is her favourite restaurant?", "A) Ocean Basket", "B) KFC", "C) Chicken Licken", "D) Mc Donald's", "A) Ocean Basket"}
-        };
-
-        InsertQuestions(db, username, questions);
-    }
 
     // Method to insert questions into the database
     private void InsertQuestions(SQLiteDatabase db, String username, String[][] questions) {

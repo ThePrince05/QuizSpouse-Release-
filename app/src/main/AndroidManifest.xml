@@ -24,13 +24,10 @@
             android:name=".ResultActivity"
             android:exported="false" />
         <activity
-            android:name=".MommyQuiz"
+            android:name=".HerQuiz"
             android:exported="false" />
         <activity
-            android:name=".MalumeQuiz"
-            android:exported="false" />
-        <activity
-            android:name=".TshiamoQuiz"
+            android:name=".HisQuiz"
             android:exported="false" />
         <activity
             android:name=".DeleteActivity"

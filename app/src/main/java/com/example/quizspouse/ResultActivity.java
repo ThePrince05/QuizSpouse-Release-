@@ -55,7 +55,7 @@ public class ResultActivity extends AppCompatActivity {
 
         }
         else if(score <= 49){
-            resultInfo.setText("Listen to "+ userName + "more.");
+            resultInfo.setText("Listen to "+ userName + " more.");
             resultInfo.setTextColor(getResources().getColor(R.color.red));
             resultImage.setImageResource(R.drawable.heartbandage);
         }

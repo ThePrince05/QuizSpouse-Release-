@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -17,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
 
     DatabaseHelper dbHelper;
 
-    MaterialCardView mommycard, malumecard, tshiamocard, addcard, deletecard, aboutcard;
+    MaterialCardView hercard, hiscard, addcard, deletecard, aboutcard;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,34 +33,26 @@ public class MainActivity extends AppCompatActivity {
         SQLiteDatabase db = dbHelper.getWritableDatabase();
 
 
-        mommycard = findViewById(R.id.mommyCard);
-        malumecard = findViewById(R.id.malumeCard);
-        tshiamocard = findViewById(R.id.tshiamoCard);
+        hercard = findViewById(R.id.herCard);
+        hiscard = findViewById(R.id.hisCard);
         addcard = findViewById(R.id.addCard);
         deletecard = findViewById(R.id.deleteCard);
         aboutcard = findViewById(R.id.aboutCard);
 
 
-        mommycard.setOnClickListener(new View.OnClickListener() {
+        hercard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this, MommyQuiz.class));
+                startActivity(new Intent(MainActivity.this, HerQuiz.class));
                 finish();
             }
         });
 
-        malumecard.setOnClickListener(new View.OnClickListener() {
+        hiscard.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this, MalumeQuiz.class));
-                finish();
-            }
-        });
-        tshiamocard.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this, TshiamoQuiz.class));
+                startActivity(new Intent(MainActivity.this, HisQuiz.class));
                 finish();
             }
         });

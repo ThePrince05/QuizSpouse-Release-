@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:background="@color/backg"
-        tools:context=".MommyQuiz"
+        tools:context=".HerQuiz"
         android:fitsSystemWindows="true">
 
     <com.google.android.material.appbar.AppBarLayout

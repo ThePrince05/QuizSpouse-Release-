@@ -15,17 +15,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.io.IOException;
-import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class MalumeQuiz extends AppCompatActivity {
+public class HisQuiz extends AppCompatActivity {
 
     TextView quiztext, aanswer, banswer, canswer, danswer;
     List<QuestionsItem> questionsItems;
@@ -41,7 +35,7 @@ public class MalumeQuiz extends AppCompatActivity {
 
         // Set up userName Variable
         GlobalVariables globalVariables = (GlobalVariables) getApplicationContext();
-        globalVariables.setUserName("Malume");
+        globalVariables.setUserName("your man");
 
         quiztext = findViewById(R.id.quizText);
         aanswer = findViewById(R.id.aanswer);
@@ -79,7 +73,7 @@ public class MalumeQuiz extends AppCompatActivity {
                         }
                     }, 500);
                 } else {
-                    Intent intent = new Intent(MalumeQuiz.this, ResultActivity.class);
+                    Intent intent = new Intent(HisQuiz.this, ResultActivity.class);
                     intent.putExtra("correct", correct);
                     intent.putExtra("wrong", wrong);
                     startActivity(intent);
@@ -114,7 +108,7 @@ public class MalumeQuiz extends AppCompatActivity {
                         }
                     }, 500);
                 } else {
-                    Intent intent = new Intent(MalumeQuiz.this, ResultActivity.class);
+                    Intent intent = new Intent(HisQuiz.this, ResultActivity.class);
                     intent.putExtra("correct", correct);
                     intent.putExtra("wrong", wrong);
                     startActivity(intent);
@@ -149,7 +143,7 @@ public class MalumeQuiz extends AppCompatActivity {
                         }
                     }, 500);
                 } else {
-                    Intent intent = new Intent(MalumeQuiz.this, ResultActivity.class);
+                    Intent intent = new Intent(HisQuiz.this, ResultActivity.class);
                     intent.putExtra("correct", correct);
                     intent.putExtra("wrong", wrong);
                     startActivity(intent);
@@ -184,7 +178,7 @@ public class MalumeQuiz extends AppCompatActivity {
                         }
                     }, 500);
                 } else {
-                    Intent intent = new Intent(MalumeQuiz.this, ResultActivity.class);
+                    Intent intent = new Intent(HisQuiz.this, ResultActivity.class);
                     intent.putExtra("correct", correct);
                     intent.putExtra("wrong", wrong);
                     startActivity(intent);
@@ -213,7 +207,7 @@ public class MalumeQuiz extends AppCompatActivity {
             SQLiteDatabase db = dbHelper.getReadableDatabase();
 
             // Query to select all questions
-            String query = "SELECT question, answer1, answer2, answer3, answer4, correct FROM Questions Where username = 'Malume' ";
+            String query = "SELECT question, answer1, answer2, answer3, answer4, correct FROM Questions Where username = 'His' ";
             Cursor cursor = db.rawQuery(query, null);
 
             try {
@@ -235,7 +229,7 @@ public class MalumeQuiz extends AppCompatActivity {
 
             }
             catch (Exception ex){
-                Toast.makeText(MalumeQuiz.this, "Oops, something went wrong on: " + ex.getMessage(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(HisQuiz.this, "Oops, something went wrong on: " + ex.getMessage(), Toast.LENGTH_SHORT).show();
                 System.out.println("Oops, something went wrong on:" + ex.getMessage());
             }
             finally {
@@ -253,7 +247,7 @@ public class MalumeQuiz extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        MaterialAlertDialogBuilder MaterialAlertDialogBuilder = new MaterialAlertDialogBuilder(MalumeQuiz.this);
+        MaterialAlertDialogBuilder MaterialAlertDialogBuilder = new MaterialAlertDialogBuilder(HisQuiz.this);
         MaterialAlertDialogBuilder.setTitle("Quiz quit");
         MaterialAlertDialogBuilder.setMessage("Are you sure you want to return to home?");
         MaterialAlertDialogBuilder.setNegativeButton(R.string.no, new DialogInterface.OnClickListener() {
@@ -265,7 +259,7 @@ public class MalumeQuiz extends AppCompatActivity {
         MaterialAlertDialogBuilder.setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
-                startActivity(new Intent( MalumeQuiz.this, MainActivity.class));
+                startActivity(new Intent( HisQuiz.this, MainActivity.class));
                 finish();
             }
         });

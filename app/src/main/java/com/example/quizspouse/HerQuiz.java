@@ -14,17 +14,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.io.IOException;
-import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class TshiamoQuiz extends AppCompatActivity {
+public class HerQuiz extends AppCompatActivity {
 
     TextView quiztext, aanswer, banswer, canswer, danswer;
     List<QuestionsItem> questionsItems;
@@ -40,7 +34,8 @@ public class TshiamoQuiz extends AppCompatActivity {
 
         // Set up userName Variable
         GlobalVariables globalVariables = (GlobalVariables) getApplicationContext();
-        globalVariables.setUserName("Tshiamo");
+        globalVariables.setUserName("your lady");
+
 
         quiztext = findViewById(R.id.quizText);
         aanswer = findViewById(R.id.aanswer);
@@ -66,7 +61,7 @@ public class TshiamoQuiz extends AppCompatActivity {
 
                 }
 
-                if (currentQuestions < questionsItems.size() - 1) {
+                if(currentQuestions < questionsItems.size() - 1){
                     Handler handler = new Handler();
                     handler.postDelayed(new Runnable() {
                         @Override
@@ -76,9 +71,9 @@ public class TshiamoQuiz extends AppCompatActivity {
                             aanswer.setBackgroundResource(R.color.card_background);
                             aanswer.setTextColor(getResources().getColor(R.color.black));
                         }
-                    }, 500);
-                } else {
-                    Intent intent = new Intent(TshiamoQuiz.this, ResultActivity.class);
+                    },500);
+                } else{
+                    Intent intent = new Intent(HerQuiz.this, ResultActivity.class);
                     intent.putExtra("correct", correct);
                     intent.putExtra("wrong", wrong);
                     startActivity(intent);
@@ -101,7 +96,7 @@ public class TshiamoQuiz extends AppCompatActivity {
 
                 }
 
-                if (currentQuestions < questionsItems.size() - 1) {
+                if(currentQuestions < questionsItems.size() - 1){
                     Handler handler = new Handler();
                     handler.postDelayed(new Runnable() {
                         @Override
@@ -111,9 +106,9 @@ public class TshiamoQuiz extends AppCompatActivity {
                             banswer.setBackgroundResource(R.color.card_background);
                             banswer.setTextColor(getResources().getColor(R.color.black));
                         }
-                    }, 500);
-                } else {
-                    Intent intent = new Intent(TshiamoQuiz.this, ResultActivity.class);
+                    },500);
+                } else{
+                    Intent intent = new Intent(HerQuiz.this, ResultActivity.class);
                     intent.putExtra("correct", correct);
                     intent.putExtra("wrong", wrong);
                     startActivity(intent);
@@ -136,7 +131,7 @@ public class TshiamoQuiz extends AppCompatActivity {
 
                 }
 
-                if (currentQuestions < questionsItems.size() - 1) {
+                if(currentQuestions < questionsItems.size() - 1){
                     Handler handler = new Handler();
                     handler.postDelayed(new Runnable() {
                         @Override
@@ -146,9 +141,9 @@ public class TshiamoQuiz extends AppCompatActivity {
                             canswer.setBackgroundResource(R.color.card_background);
                             canswer.setTextColor(getResources().getColor(R.color.black));
                         }
-                    }, 500);
-                } else {
-                    Intent intent = new Intent(TshiamoQuiz.this, ResultActivity.class);
+                    },500);
+                } else{
+                    Intent intent = new Intent(HerQuiz.this, ResultActivity.class);
                     intent.putExtra("correct", correct);
                     intent.putExtra("wrong", wrong);
                     startActivity(intent);
@@ -171,7 +166,7 @@ public class TshiamoQuiz extends AppCompatActivity {
 
                 }
 
-                if (currentQuestions < questionsItems.size() - 1) {
+                if(currentQuestions < questionsItems.size() - 1){
                     Handler handler = new Handler();
                     handler.postDelayed(new Runnable() {
                         @Override
@@ -181,9 +176,9 @@ public class TshiamoQuiz extends AppCompatActivity {
                             danswer.setBackgroundResource(R.color.card_background);
                             danswer.setTextColor(getResources().getColor(R.color.black));
                         }
-                    }, 500);
-                } else {
-                    Intent intent = new Intent(TshiamoQuiz.this, ResultActivity.class);
+                    },500);
+                } else{
+                    Intent intent = new Intent(HerQuiz.this, ResultActivity.class);
                     intent.putExtra("correct", correct);
                     intent.putExtra("wrong", wrong);
                     startActivity(intent);
@@ -211,7 +206,7 @@ public class TshiamoQuiz extends AppCompatActivity {
         SQLiteDatabase db = dbHelper.getReadableDatabase();
 
         // Query to select all questions
-        String query = "SELECT question, answer1, answer2, answer3, answer4, correct FROM Questions Where username = 'Tshiamo'";
+        String query = "SELECT question, answer1, answer2, answer3, answer4, correct FROM Questions Where username = 'Her' ";
         Cursor cursor = db.rawQuery(query, null);
 
         try {
@@ -243,7 +238,7 @@ public class TshiamoQuiz extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        MaterialAlertDialogBuilder MaterialAlertDialogBuilder = new MaterialAlertDialogBuilder(TshiamoQuiz.this);
+        MaterialAlertDialogBuilder MaterialAlertDialogBuilder = new MaterialAlertDialogBuilder(HerQuiz.this);
         MaterialAlertDialogBuilder.setTitle("Quiz quit");
         MaterialAlertDialogBuilder.setMessage("Are you sure you want to return to home?");
         MaterialAlertDialogBuilder.setNegativeButton(R.string.no, new DialogInterface.OnClickListener() {
@@ -255,12 +250,11 @@ public class TshiamoQuiz extends AppCompatActivity {
         MaterialAlertDialogBuilder.setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
-                startActivity(new Intent(TshiamoQuiz.this, MainActivity.class));
+                startActivity(new Intent( HerQuiz.this, MainActivity.class));
                 finish();
             }
         });
         MaterialAlertDialogBuilder.show();
     }
+
 }
-
-

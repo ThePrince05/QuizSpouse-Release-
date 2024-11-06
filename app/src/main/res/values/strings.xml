@@ -7,16 +7,12 @@
     <string name="exit_message">Are you sure you want to exit the app?</string>
     <string name="yes">Yes</string>
     <string name="no">No</string>
-    <string name="mommy_quiz">Mommy Quiz</string>
-    <string name="malume_quiz">Malume Quiz</string>
     <string name="app_version_1_0">App Version: 1.0</string>
-    <string name="tshiamo_quiz">Tshiamo Quiz</string>
 
     <string-array name="userList">
         <item>Select an option</item>
-        <item>Mommy</item>
-        <item>Tshiamo</item>
-        <item>Malume</item>
+        <item>Her</item>
+        <item>His</item>
     </string-array>
 
     <string-array name="questionList">
